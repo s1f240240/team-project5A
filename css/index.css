@@ -1,13 +1,29 @@
-.sea{
-    text-align: center;
+h1{
+    display: flex;
+    justify-content: center;
     background-color: rgba(172, 171, 171, 0.48);
-    font-size:40px;
+    font-size:60px;
+}
+.sea{
     color:#00bfff
 }
 
 .mountain{
-    text-align: center;
-    background-color: rgba(172, 171, 171, 0.48);
-    font-size:40px;
     color:rgb(6, 128, 0)
+}
+
+button{
+    font-size: 50px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 30%;
+    border-color: rgba(172, 171, 171, 0.48);
+}
+
+.button-s{
+    background-color: #00bfff86;
+}
+
+.button-m{
+    background-color: rgba(6, 128, 0, 0.327);
 }
