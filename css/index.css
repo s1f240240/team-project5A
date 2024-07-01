@@ -1,3 +1,13 @@
-h1{
-    color:rgb(0, 128, 85)
+.sea{
+    text-align: center;
+    background-color: rgba(172, 171, 171, 0.48);
+    font-size:40px;
+    color:#00bfff
+}
+
+.mountain{
+    text-align: center;
+    background-color: rgba(172, 171, 171, 0.48);
+    font-size:40px;
+    color:rgb(6, 128, 0)
 }
