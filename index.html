@@ -20,17 +20,26 @@
         <li>健康効果を得ることができる</li>
         </ul>
 
-        <h1>海と山どっちが好きですか？</h1>
-        <p name="seaVSmountain" id="SeaVsMountain">
-            <p>
-                <label for="id_checkbox1">海</label>
-                <input id="id_checkbox1" name="options" type="radio" value="海">
-            </p>
-        
-            <p>
-                <label for="id_checkbox2">山</label>
-                <input id="id_checkbox2"name="options" type="radio" value="山">
-            </p>
+    <h1>海VS山</h1>
+    <p>どっちが好きですか？</p>
+    <button class="button" onclick="vote('Sea')">海</button>
+    <button class="button" onclick="vote('Mountain')">山</button>
 
+    <div class="result" id="result">まだ投票されていません。</div>
+
+    <script>
+        const votes ={'Sea':0,'Mountain':0}
+        function vote(option){
+            votes[option]++
+            result()
+        }
+        function result(){
+            const resultDisplay=document.getElementById('result')
+            resultDisplay.innerHTML = `
+                海: ${votes['Sea']} votes<br>
+                山: ${votes['Mountain']} votes
+            `;
+        }
+    </script>
     </body>
 </html>

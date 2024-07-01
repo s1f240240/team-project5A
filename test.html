@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投票ボタン</title>
+    <style>
+        /* シンプルなスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>投票してみましょう！</h1>
+
+    <!-- 投票ボタン -->
+    <button class="button" onclick="vote('Option A')">Option A</button>
+    <button class="button" onclick="vote('Option B')">Option B</button>
+
+    <!-- 結果を表示するエリア -->
+    <div class="result" id="result">まだ投票されていません。</div>
+
+    <!-- JavaScriptのコードをここに追加 -->
+    <script>
+        // 投票結果を保存するオブジェクト
+        const votes = { 'Option A': 0, 'Option B': 0 };
+
+        // 投票ボタンがクリックされたときに呼ばれる関数
+        function vote(option) {
+            // 対象の選択肢の投票数をインクリメント
+            votes[option]++;
+            
+            // 結果を更新
+            updateResult();
+        }
+
+        // 結果を更新する関数
+        function updateResult() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                Option A: ${votes['Option A']} votes<br>
+                Option B: ${votes['Option B']} votes
+            `;
+        }
+    </script>
+
+</body>
+</html>
